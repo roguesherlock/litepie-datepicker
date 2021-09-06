@@ -87,7 +87,11 @@
                 :as-range="asRange()"
                 :as-single="asSingle"
                 :i18n="options.shortcuts"
-              />
+              >
+                <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
+                  <slot :name="name" v-bind="slotData" />
+                </template>
+              </litepie-shortcut>
               <!--          Calendar-->
               <div class="relative flex flex-wrap sm:flex-nowrap p-1">
                 <div
@@ -409,8 +413,7 @@ export default /*#__PURE__*/ defineComponent({
                 v.active = previous.month() === v.month();
                 v.off = previous.month() !== v.month();
                 v.sunday = v.day() === 0;
-                v.disabled =
-                  useDisableDate(v, props) && !inRangeDate(v);
+                v.disabled = useDisableDate(v, props) && !inRangeDate(v);
                 v.inRange = () => {
                   if (props.asSingle && !props.useRange) {
                     return previous.month() !== v.month();
@@ -535,8 +538,7 @@ export default /*#__PURE__*/ defineComponent({
                 v.active = next.month() === v.month();
                 v.off = next.month() !== v.month();
                 v.sunday = v.day() === 0;
-                v.disabled =
-                  useDisableDate(v, props) && !inRangeDate(v);
+                v.disabled = useDisableDate(v, props) && !inRangeDate(v);
                 v.inRange = () => {
                   if (props.asSingle && !props.useRange) {
                     return next.month() !== v.month();
