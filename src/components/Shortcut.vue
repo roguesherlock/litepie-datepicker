@@ -114,7 +114,6 @@ export default defineComponent({
         return false;
       }
     };
-    console.log('lalala', withShortcut());
 
     return {
       setToToday,
