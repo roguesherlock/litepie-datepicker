@@ -447,21 +447,16 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
 };
 var _hoisted_2$3 = {
   key: 0,
-  class: "grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0"
-};
-var _hoisted_3$1 = {
-  key: 0,
   class: "block border-t border-gray-200 my-1"
 };
-var _hoisted_4$1 = {
-  key: 1,
-  class: "grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0"
-};
 function render$5(_ctx, _cache, $props, $setup, $data, $options) {
-  return _ctx.shortcuts ? (vue.openBlock(), vue.createBlock("div", _hoisted_1$5, [_ctx.withShortcut() ? (vue.openBlock(), vue.createBlock("ol", _hoisted_2$3, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(_ctx.withShortcut(), function (item, i) {
+  return _ctx.shortcuts ? (vue.openBlock(), vue.createBlock("div", _hoisted_1$5, [_ctx.withShortcut() ? (vue.openBlock(), vue.createBlock("ol", {
+    key: 0,
+    class: [" w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0", [_ctx.asSingle ? 'block' : 'grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block']]
+  }, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(_ctx.withShortcut(), function (item, i) {
     return vue.openBlock(), vue.createBlock(vue.Fragment, {
       key: i
-    }, [item.divide ? (vue.openBlock(), vue.createBlock("li", _hoisted_3$1)) : vue.createCommentVNode("", true), vue.createVNode("li", null, [vue.createVNode("a", {
+    }, [item.divide ? (vue.openBlock(), vue.createBlock("li", _hoisted_2$3)) : vue.createCommentVNode("", true), vue.createVNode("li", null, [vue.createVNode("a", {
       href: "#",
       class: "litepie-shortcuts block text-sm lg:text-xs px-2 py-2 sm:leading-4 whitespace-nowrap font-medium rounded text-litepie-primary-600 hover:text-litepie-primary-700 transition-colors hover:bg-litepie-secondary-100 focus:bg-litepie-secondary-100 focus:text-litepie-primary-600 dark:hover:bg-litepie-secondary-700 dark:hover:text-litepie-primary-300 dark:text-litepie-primary-400 dark:focus:bg-litepie-secondary-700 dark:focus:text-litepie-primary-300",
       onClick: vue.withModifiers(function ($event) {
@@ -472,7 +467,10 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
     }, function () {
       return [vue.createTextVNode(vue.toDisplayString(item.label), 1)];
     })], 8, ["onClick"])])], 64);
-  }), 128))])) : (vue.openBlock(), vue.createBlock("ol", _hoisted_4$1, [vue.createVNode("li", null, [vue.createVNode("a", {
+  }), 128))], 2)) : (vue.openBlock(), vue.createBlock("ol", {
+    key: 1,
+    class: ["w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0", [_ctx.asSingle ? 'block' : 'grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block']]
+  }, [vue.createVNode("li", null, [vue.createVNode("a", {
     href: "#",
     class: "litepie-shortcuts block text-sm lg:text-xs px-2 py-2 sm:leading-4 whitespace-nowrap font-medium rounded text-litepie-primary-600 hover:text-litepie-primary-700 transition-colors hover:bg-litepie-secondary-100 focus:bg-litepie-secondary-100 focus:text-litepie-primary-600 dark:hover:bg-litepie-secondary-700 dark:hover:text-litepie-primary-300 dark:text-litepie-primary-400 dark:focus:bg-litepie-secondary-700 dark:focus:text-litepie-primary-300",
     onClick: _cache[1] || (_cache[1] = vue.withModifiers(function () {
@@ -508,7 +506,7 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[6] || (_cache[6] = vue.withModifiers(function () {
       return _ctx.setToLastMonth && _ctx.setToLastMonth.apply(_ctx, arguments);
     }, ["prevent"]))
-  }, vue.toDisplayString(_ctx.i18n.pastMonth), 1)])]))])) : vue.createCommentVNode("", true);
+  }, vue.toDisplayString(_ctx.i18n.pastMonth), 1)])], 2))])) : vue.createCommentVNode("", true);
 }script$5.render = render$5;function __variableDynamicImportRuntime0__(path) {
    switch (path) {
      case './locale/af.js': return Promise.resolve().then(function(){return af});
@@ -2046,14 +2044,14 @@ var script$6 = /*#__PURE__*/vue.defineComponent({
 var _hoisted_2$4 = {
   class: "absolute inset-y-0 right-0 inline-flex items-center rounded-md overflow-hidden"
 };
-var _hoisted_3$2 = {
+var _hoisted_3$1 = {
   class: "w-5 h-5",
   fill: "none",
   stroke: "currentColor",
   viewBox: "0 0 24 24",
   xmlns: "http://www.w3.org/2000/svg"
 };
-var _hoisted_4$2 = {
+var _hoisted_4$1 = {
   key: 0,
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
@@ -2160,7 +2158,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
       onClick: _cache[3] || (_cache[3] = function ($event) {
         return _ctx.pickerValue ? _ctx.clearPicker() : _ctx.$refs.LitepieInputRef.focus();
       })
-    }, [(vue.openBlock(), vue.createBlock("svg", _hoisted_3$2, [_ctx.pickerValue ? (vue.openBlock(), vue.createBlock("path", _hoisted_4$2)) : (vue.openBlock(), vue.createBlock("path", _hoisted_5$1))]))])])])];
+    }, [(vue.openBlock(), vue.createBlock("svg", _hoisted_3$1, [_ctx.pickerValue ? (vue.openBlock(), vue.createBlock("path", _hoisted_4$1)) : (vue.openBlock(), vue.createBlock("path", _hoisted_5$1))]))])])])];
   }), vue.createVNode(vue.Transition, {
     "enter-from-class": "opacity-0 translate-y-3",
     "enter-to-class": "opacity-100 translate-y-0",

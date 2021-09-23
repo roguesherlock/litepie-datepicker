@@ -406,28 +406,26 @@ const _hoisted_1$5 = {
 };
 const _hoisted_2$3 = {
   key: 0,
-  class: "grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0"
-};
-const _hoisted_3$1 = {
-  key: 0,
   class: "block border-t border-gray-200 my-1"
 };
-const _hoisted_4$1 = {
-  key: 1,
-  class: "grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0"
-};
 function render$5(_ctx, _cache, $props, $setup, $data, $options) {
-  return _ctx.shortcuts ? (openBlock(), createBlock("div", _hoisted_1$5, [_ctx.withShortcut() ? (openBlock(), createBlock("ol", _hoisted_2$3, [(openBlock(true), createBlock(Fragment, null, renderList(_ctx.withShortcut(), (item, i) => {
+  return _ctx.shortcuts ? (openBlock(), createBlock("div", _hoisted_1$5, [_ctx.withShortcut() ? (openBlock(), createBlock("ol", {
+    key: 0,
+    class: [" w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0", [_ctx.asSingle ? 'block' : 'grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block']]
+  }, [(openBlock(true), createBlock(Fragment, null, renderList(_ctx.withShortcut(), (item, i) => {
     return openBlock(), createBlock(Fragment, {
       key: i
-    }, [item.divide ? (openBlock(), createBlock("li", _hoisted_3$1)) : createCommentVNode("", true), createVNode("li", null, [createVNode("a", {
+    }, [item.divide ? (openBlock(), createBlock("li", _hoisted_2$3)) : createCommentVNode("", true), createVNode("li", null, [createVNode("a", {
       href: "#",
       class: "litepie-shortcuts block text-sm lg:text-xs px-2 py-2 sm:leading-4 whitespace-nowrap font-medium rounded text-litepie-primary-600 hover:text-litepie-primary-700 transition-colors hover:bg-litepie-secondary-100 focus:bg-litepie-secondary-100 focus:text-litepie-primary-600 dark:hover:bg-litepie-secondary-700 dark:hover:text-litepie-primary-300 dark:text-litepie-primary-400 dark:focus:bg-litepie-secondary-700 dark:focus:text-litepie-primary-300",
       onClick: withModifiers($event => _ctx.setToCustomShortcut(item), ["prevent"])
     }, [renderSlot(_ctx.$slots, "shortcut-label", {
       item: item
     }, () => [createTextVNode(toDisplayString(item.label), 1)])], 8, ["onClick"])])], 64);
-  }), 128))])) : (openBlock(), createBlock("ol", _hoisted_4$1, [createVNode("li", null, [createVNode("a", {
+  }), 128))], 2)) : (openBlock(), createBlock("ol", {
+    key: 1,
+    class: ["w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0", [_ctx.asSingle ? 'block' : 'grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block']]
+  }, [createVNode("li", null, [createVNode("a", {
     href: "#",
     class: "litepie-shortcuts block text-sm lg:text-xs px-2 py-2 sm:leading-4 whitespace-nowrap font-medium rounded text-litepie-primary-600 hover:text-litepie-primary-700 transition-colors hover:bg-litepie-secondary-100 focus:bg-litepie-secondary-100 focus:text-litepie-primary-600 dark:hover:bg-litepie-secondary-700 dark:hover:text-litepie-primary-300 dark:text-litepie-primary-400 dark:focus:bg-litepie-secondary-700 dark:focus:text-litepie-primary-300",
     onClick: _cache[1] || (_cache[1] = withModifiers((...args) => _ctx.setToToday && _ctx.setToToday(...args), ["prevent"]))
@@ -451,7 +449,7 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
     href: "#",
     class: "litepie-shortcuts block text-sm lg:text-xs px-2 py-2 sm:leading-4 whitespace-nowrap font-medium rounded text-litepie-primary-600 hover:text-litepie-primary-700 transition-colors hover:bg-litepie-secondary-100 focus:bg-litepie-secondary-100 focus:text-litepie-primary-600 dark:hover:bg-litepie-secondary-700 dark:hover:text-litepie-primary-300 dark:text-litepie-primary-400 dark:focus:bg-litepie-secondary-700 dark:focus:text-litepie-primary-300",
     onClick: _cache[6] || (_cache[6] = withModifiers((...args) => _ctx.setToLastMonth && _ctx.setToLastMonth(...args), ["prevent"]))
-  }, toDisplayString(_ctx.i18n.pastMonth), 1)])]))])) : createCommentVNode("", true);
+  }, toDisplayString(_ctx.i18n.pastMonth), 1)])], 2))])) : createCommentVNode("", true);
 }
 
 script$5.render = render$5;
@@ -1784,14 +1782,14 @@ const _hoisted_1$6 = {
 const _hoisted_2$4 = {
   class: "absolute inset-y-0 right-0 inline-flex items-center rounded-md overflow-hidden"
 };
-const _hoisted_3$2 = {
+const _hoisted_3$1 = {
   class: "w-5 h-5",
   fill: "none",
   stroke: "currentColor",
   viewBox: "0 0 24 24",
   xmlns: "http://www.w3.org/2000/svg"
 };
-const _hoisted_4$2 = {
+const _hoisted_4$1 = {
   key: 0,
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
@@ -1891,7 +1889,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
     type: "button",
     class: "px-2 py-1 mr-1 focus:outline-none text-litepie-secondary-400 dark:text-opacity-70 rounded-md",
     onClick: _cache[3] || (_cache[3] = $event => _ctx.pickerValue ? _ctx.clearPicker() : _ctx.$refs.LitepieInputRef.focus())
-  }, [(openBlock(), createBlock("svg", _hoisted_3$2, [_ctx.pickerValue ? (openBlock(), createBlock("path", _hoisted_4$2)) : (openBlock(), createBlock("path", _hoisted_5$1))]))])])])]), createVNode(Transition, {
+  }, [(openBlock(), createBlock("svg", _hoisted_3$1, [_ctx.pickerValue ? (openBlock(), createBlock("path", _hoisted_4$1)) : (openBlock(), createBlock("path", _hoisted_5$1))]))])])])]), createVNode(Transition, {
     "enter-from-class": "opacity-0 translate-y-3",
     "enter-to-class": "opacity-100 translate-y-0",
     "enter-active-class": "transform transition ease-out duration-200",
