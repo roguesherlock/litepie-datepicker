@@ -386,7 +386,6 @@ var script$5 = defineComponent({
       }
     };
 
-    console.log('lalala', withShortcut());
     return {
       setToToday,
       setToYesterday,

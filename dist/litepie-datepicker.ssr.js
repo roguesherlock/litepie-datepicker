@@ -430,7 +430,6 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
       }
     };
 
-    console.log('lalala', withShortcut());
     return {
       setToToday: setToToday,
       setToYesterday: setToYesterday,
