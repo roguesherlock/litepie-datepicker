@@ -8,7 +8,7 @@
       class="grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0"
     >
       <template v-for="(item, i) in withShortcut()" :key="i">
-        <li v-if="item.divide" class="block border-t border-gray-200"></li>
+        <li v-if="item.divide" class="block border-t border-gray-200 my-1"></li>
         <li>
           <a
             href="#"
