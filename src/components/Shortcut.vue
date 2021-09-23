@@ -7,15 +7,18 @@
       v-if="withShortcut()"
       class="grid grid-cols-2 sm:grid-cols-3 gap-1 lg:block w-full pr-0 sm:pr-1 mt-1.5 sm:mt-0 sm:mb-1.5 lg:mb-0"
     >
-      <li v-for="(item, i) in withShortcut()" :key="i">
-        <a
-          href="#"
-          class="litepie-shortcuts block text-sm lg:text-xs px-2 py-2 sm:leading-4 whitespace-nowrap font-medium rounded text-litepie-primary-600 hover:text-litepie-primary-700 transition-colors hover:bg-litepie-secondary-100 focus:bg-litepie-secondary-100 focus:text-litepie-primary-600 dark:hover:bg-litepie-secondary-700 dark:hover:text-litepie-primary-300 dark:text-litepie-primary-400 dark:focus:bg-litepie-secondary-700 dark:focus:text-litepie-primary-300"
-          @click.prevent="setToCustomShortcut(item)"
-        >
-          <slot name="shortcut-label" :item="item">{{ item.label }}</slot>
-        </a>
-      </li>
+      <template v-for="(item, i) in withShortcut()" :key="i">
+        <li v-if="item.divide" class="block border-t border-gray-200"></li>
+        <li>
+          <a
+            href="#"
+            class="litepie-shortcuts block text-sm lg:text-xs px-2 py-2 sm:leading-4 whitespace-nowrap font-medium rounded text-litepie-primary-600 hover:text-litepie-primary-700 transition-colors hover:bg-litepie-secondary-100 focus:bg-litepie-secondary-100 focus:text-litepie-primary-600 dark:hover:bg-litepie-secondary-700 dark:hover:text-litepie-primary-300 dark:text-litepie-primary-400 dark:focus:bg-litepie-secondary-700 dark:focus:text-litepie-primary-300"
+            @click.prevent="setToCustomShortcut(item)"
+          >
+            <slot name="shortcut-label" :item="item">{{ item.label }}</slot>
+          </a>
+        </li>
+      </template>
     </ol>
     <ol
       v-else
@@ -105,6 +108,7 @@ export default defineComponent({
         return false;
       }
     };
+    console.log('lalala', withShortcut());
 
     return {
       setToToday,
