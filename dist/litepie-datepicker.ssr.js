@@ -451,7 +451,7 @@ var _hoisted_2$3 = {
 };
 var _hoisted_3$1 = {
   key: 0,
-  class: "block border-t border-gray-200"
+  class: "block border-t border-gray-200 my-1"
 };
 var _hoisted_4$1 = {
   key: 1,
